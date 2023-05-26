@@ -1,13 +1,20 @@
 package com.lidp.fare.domain;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
+@Embeddable
 public class FareId implements Serializable
 {
+   @Column
    private Instant departureTime;
+   @Column(name = "distance_miles")
    private double distanceMi;
+   @Column
    private int seatRow;
 
    public FareId()
