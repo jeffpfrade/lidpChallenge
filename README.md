@@ -1,6 +1,6 @@
-# Video Explanation
-# [Click here](https://youtu.be/_SHmHjBJprM)
+# [Click here for the short video explanation](https://youtu.be/_SHmHjBJprM)
 
+---
 
 # LIDP Kubernetes Challenge
 
