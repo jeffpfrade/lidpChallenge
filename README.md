@@ -1,3 +1,7 @@
+# Video Explanation
+[Click here](https://youtu.be/_SHmHjBJprM)
+
+
 # LIDP Kubernetes Challenge
 
 This base project includes a service that calculates the fare for a flight given the following inputs:
