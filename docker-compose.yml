@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    restart: always
+    image: "mysql:5.7"
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: LIDPFare
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+      MYSQL_ROOT_PASSWORD: user
+  server:
+    build: .
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysqldb
+

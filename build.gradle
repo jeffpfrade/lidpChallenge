@@ -1,20 +1,29 @@
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.1.0'
+    id 'com.palantir.docker' version '0.35.0'
 }
 
 apply plugin: 'io.spring.dependency-management'
 
 group 'com.example'
-version '0.0.1-SNAPSHOT'
+version '1.0'
 
 repositories {
     mavenCentral()
 }
 
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.lidp.fare.FareCalculator'
+        )
+    }
+}
+
 dependencies {
-    //testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
-    //testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 
     // New dependencies added
     implementation('org.springframework.boot:spring-boot-starter-web')

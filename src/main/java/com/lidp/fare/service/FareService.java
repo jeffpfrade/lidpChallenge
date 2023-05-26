@@ -32,7 +32,7 @@ public class FareService
       return fareRepository.findById(id);
    }
 
-   public Fare saveFare(FareId fareId){
+   public Fare saveFare(FareId fareId) {
 
       Optional<Fare> result = fareRepository.findById(fareId);
       // check if fare has already been calculated
